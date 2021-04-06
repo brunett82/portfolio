@@ -1,35 +1,51 @@
 :root {
     --font: helvetica, arial, sans-serif, serif;
 }
+
+*, :before, :after {
+    box-sizing: border-box;
+}
+html {
+    -webkit-text-size-adjust: 100%;
+    padding: 0;
+    gap: 3rem;
+    color: white;
+}
 body {
-    background: url(https://wallpapercave.com/wp/wp3493593.jpg) no-repeat center center fixed;
+    background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
 }
 
 header {
-    font-family: var(--font);
-    color: white;
-    background-color: black;
-    margin: 25px 25px 25px 25px;
-    border-style:solid;
-    border-color: rgb(145, 142, 142);
-    border-radius: 20px;
-    
+    display: flexbox;
+    margin-top: 50px;    
 }
 
-h1 {
-    margin-left: 200px;
-    margin-bottom: 0px;
-    margin-top: 35px;
+section {
+     display: block;
+ }
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: white;
+    font-size: 20px;
 }
-h2 {
+
+.title {
+    font-family: var(--font);
+    font-size: 35px;
+    margin: 35px 0px 0px 180px;
+}
+.subtitle {
     color: white;
     font-family: var(--font);
     font-size: 20px;
-    margin-left: 200px;
-    margin-top: 0px;
+    margin: 0px 200px 40px 180px;  
 }
 
 .profile_pic {
@@ -46,15 +62,21 @@ h2 {
     border-image-outset: 100px;
     
 }
+/*Nav bar*/
 .topnav {
     overflow: hidden;
     display:flex;
-    float:inline-end;   
+    float:right;  
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;     
 }
 
 .topnav a {
     float: left;
-    padding: 20px 25px 10px 0px;
+    padding: 14px;
     text-decoration: none;
     font-size: 20px;
     font-family: ;
@@ -62,10 +84,101 @@ h2 {
 }
 
 .topnav a:hover {
-    text-shadow: 0px 0px 10px white,
-                0px 0px 20px white,
-                0px 0px 30px white,
-                0px 0px 40px white,
-                0px 0px 45px white;
+    text-shadow: 0px 0px 4px white,
+                0px 0px 5px white,
+                0px 0px 10px white,
+                0px 0px 15px white,
+                0px 0px 25px white;
     color: white;
 }
+
+.body {
+    display: flex;
+}
+/*About box*/
+.about {
+    flex: 1 0 50px;
+    margin-left: 50px;
+    margin-top: 300px;
+    position: relative;
+    display: inline-block;
+    float: left;
+    flex-direction: row;
+    justify-content: left;
+    padding: 25px;
+    color: white;
+}
+
+.about>* {
+    position: relative;
+    z-index: 3;
+}
+
+.about::before {
+    content: "";
+    background: linear-gradient(130deg,#e5e7eb,#353635 41.07%,#0e0e0d 76.05%);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    z-index: 1;
+    border-radius: 12px;
+}
+
+.about::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 2;
+    border-radius: 8px;
+}
+
+.Portfolio {
+    display: flex;
+    margin-left: 50px;
+    margin-top: 300px; 
+    
+}
+
+.work-header-card {
+    padding: 20px;
+    border-radius: 16px;
+    background: linear-gradient(85deg,#434343,#262626);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 1rem;
+    position: relative;
+    min-height: 350px;
+    box-shadow: -2rem 0 3rem -2rem black;
+}
+.mini-cards {
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 200px;
+    gap: 20px;
+    position: relative;
+}
+
+.mini-card-module {
+    padding: 20px;
+    border-radius: 16px;
+    background: linear-gradient(85deg,#434343,#262626);
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0;
+    margin: 0 0 1rem;
+    position: relative;
+    min-height: 350px;
+    box-shadow: -2rem 0 3rem -2rem black;
+}
+
