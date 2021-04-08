@@ -1,184 +1,161 @@
-:root {
-    --font: helvetica, arial, sans-serif, serif;
-}
-
-*, :before, :after {
+* {
     box-sizing: border-box;
-}
-html {
-    -webkit-text-size-adjust: 100%;
     padding: 0;
-    gap: 3rem;
-    color: white;
-}
-body {
-    background-color: black;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-}
-
-header {
-    display: flexbox;
-    margin-top: 50px;    
-}
-
-section {
-     display: block;
- }
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    color: white;
-    font-size: 20px;
-}
-
-.title {
-    font-family: var(--font);
-    font-size: 35px;
-    margin: 35px 0px 0px 180px;
-}
-.subtitle {
-    color: white;
-    font-family: var(--font);
-    font-size: 20px;
-    margin: 0px 200px 40px 180px;  
-}
-
-.profile_pic {
-    background: url(https://www.dictionary.com/e/wp-content/uploads/2018/03/Thinking_Face_Emoji-Emoji-Island-300x300.png);
-    width: 100px;
-    height: 100px;
-    margin-left: 50px;
-    margin-top: 15px;
-    background-size: cover;
-    display: inline-flex;
-    float:left;
-    border-style: solid;
-    border-radius: 100px;
-    border-image-outset: 100px;
-    
-}
-/*Nav bar*/
-.topnav {
-    overflow: hidden;
-    display:flex;
-    float:right;  
     margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    right: 0;     
+}
+
+body {
+    font-family: helvetica, arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    font-weight:900;
+}
+
+p {
+    font-size: 20px;
+    font-weight: normal;
+}
+.topnav {
+    display: inline-flex;
+    flex-wrap: wrap;
+    background-color:black;
+    overflow: hidden;
+    margin-left: 70%;
 }
 
 .topnav a {
-    float: left;
-    padding: 14px;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: ;
+    float:inline-end;
     color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
 }
 
 .topnav a:hover {
-    text-shadow: 0px 0px 4px white,
-                0px 0px 5px white,
-                0px 0px 10px white,
-                0px 0px 15px white,
-                0px 0px 25px white;
-    color: white;
+    background-color: rgb(217, 224, 224);
+    color: black;
+    border-radius: 20%;
 }
 
-.body {
-    display: flex;
-}
-/*About box*/
-.about {
-    flex: 1 0 50px;
-    margin-left: 50px;
-    margin-top: 300px;
-    position: relative;
-    display: inline-block;
-    float: left;
-    flex-direction: row;
-    justify-content: left;
-    padding: 25px;
-    color: white;
+.title {
+    display: inline-flex;
+    flex-wrap: wrap;
+    float: inline-start;
 }
 
-.about>* {
-    position: relative;
-    z-index: 3;
+.headshot {
+    width: 100px;
+    height: 100px;
+    padding: 10px 10px;
+    margin: 0px 25px 0px 25px;
 }
 
-.about::before {
-    content: "";
-    background: linear-gradient(130deg,#e5e7eb,#353635 41.07%,#0e0e0d 76.05%);
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
-    z-index: 1;
-    border-radius: 12px;
+.name {
+    justify-content: center;
+    padding-top: 25px;
 }
 
-.about::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+.hero {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
     width: 100%;
-    height: 100%;
-    background: #000;
-    z-index: 2;
-    border-radius: 8px;
+    height: 20%;
+    border-top: 10px;
+    border-bottom: 1px;
+    border-style:ridge;
+    border-image-source: linear-gradient(360deg, rgb(235, 240, 239), rgb(15, 15, 15));
+    border-image-slice: 1; 
 }
 
-.Portfolio {
+.primary {
     display: flex;
-    margin-left: 50px;
-    margin-top: 300px; 
-    
+    flex-wrap: wrap;
 }
 
-.work-header-card {
-    padding: 20px;
-    border-radius: 16px;
-    background: linear-gradient(85deg,#434343,#262626);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    margin: 0 0 1rem;
-    position: relative;
-    min-height: 350px;
-    box-shadow: -2rem 0 3rem -2rem black;
+#about_me {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 35px;
+    text-align: justify;
+    padding: 30px;
+    border: 5px;
+    border-style:ridge;
+    border-image-source: linear-gradient(360deg, rgb(235, 240, 239), rgb(15, 15, 15));
+    border-image-slice: 1; 
 }
-.mini-cards {
+
+.wrapper {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));  
+    height: 500px;
+    width: 500px;
+    gap: 35px;
+    margin-top: 50px;
+    margin-left: 125px;
+    grid-template-areas: 
+    "a a b c d e"
+    "a a b c d e";
+}
+.mbox1 {
+    margin-top: 100px;
+    margin-bottom:100px;
     padding: 10px;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1 0 200px;
-    gap: 20px;
-    position: relative;
+    border: 5px;
+    border-style:ridge;
+    border-image-source: linear-gradient(360deg, rgb(235, 240, 239), rgb(15, 15, 15));
+    border-image-slice: 1; 
+    grid-area: a;
 }
 
-.mini-card-module {
-    padding: 20px;
-    border-radius: 16px;
-    background: linear-gradient(85deg,#434343,#262626);
-    color: #fff;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 0;
-    margin: 0 0 1rem;
-    position: relative;
-    min-height: 350px;
-    box-shadow: -2rem 0 3rem -2rem black;
+.mbox2 {
+    height: 500px;
+    width: 300px;
+    border-style:ridge;
+    border-image-source: linear-gradient(360deg, rgb(235, 240, 239), rgb(15, 15, 15));
+    border-image-slice: 1; 
+    flex: 0 0 25%;
+    grid-area: b;
+}
+.mbox3 {
+    height: 500px;
+    width: 300px;
+    border-style:ridge;
+    border-image-source: linear-gradient(360deg, rgb(235, 240, 239), rgb(15, 15, 15));
+    border-image-slice: 1; 
+    flex: 0 0 25%;
+    grid-area: c;
+}
+.mbox4 {
+    height: 500px;
+    width: 300px;
+    border-style:ridge;
+    border-image-source: linear-gradient(360deg, rgb(235, 240, 239), rgb(15, 15, 15));
+    border-image-slice: 1; 
+    flex: 0 0 25%;
+    grid-area: d;
+}
+.mbox5 {
+    height: 500px;
+    width: 300px;
+    border-style:ridge;
+    border-image-source: linear-gradient(360deg, rgb(235, 240, 239), rgb(15, 15, 15));
+    border-image-slice: 1; 
+    flex: 0 0 25%;
+    grid-area: e;
 }
 
+@media (max-width: 700px) {
+    .wrapper {
+        'a' 'b' 'c' 'd' 'e'
+    }
+}
