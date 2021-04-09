@@ -8,11 +8,17 @@ body {
     font-family: helvetica, arial, sans-serif;
     background-color: black;
     color: white;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    position: relative;
 }
 
 h2 {
     font-size: 25px;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
+    padding-top: 10px;
     font-weight:900;
 }
 
@@ -20,22 +26,24 @@ p {
     font-size: 20px;
     font-weight: normal;
 }
+
 .topnav {
-    display: inline-flex;
+    display: inline-end;
     flex-wrap: wrap;
     background-color:black;
     overflow: hidden;
-    margin-left: 70%;
+    margin-left: 80%;
+    margin-top: 10px;
 }
 
 .topnav a {
-    float:inline-end;
     color: white;
     text-align: center;
     padding: 10px 10px;
     text-decoration: none;
     font-size: 17px;
     font-weight: bold;
+    margin-top: 15px;
 }
 
 .topnav a:hover {
@@ -69,22 +77,19 @@ p {
     margin-bottom: 25px;
     width: 100%;
     height: 20%;
-    border-top: 10px;
-    border-bottom: 1px;
-    border-style:ridge;
-    border-image-source: linear-gradient(360deg, rgb(235, 240, 239), rgb(15, 15, 15));
-    border-image-slice: 1; 
 }
 
+/*flex box for section under hero image*/
 .primary {
-    display: flex;
+    display: flexbox;
     flex-wrap: wrap;
+    margin-bottom: 250px;
+    flex: 1;
 }
-
+/*About Me paragraph*/
 #about_me {
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-bottom: 35px;
+    margin: auto;
+    max-width: 80%;
     text-align: justify;
     padding: 30px;
     border: 5px;
@@ -92,52 +97,111 @@ p {
     border-image-source: linear-gradient(360deg, rgb(235, 240, 239), rgb(15, 15, 15));
     border-image-slice: 1; 
 }
-
+/*Portfolio Section*/
 .portfolio {
     display: flex;
     flex-wrap: wrap;
     height: 500px;
-    justify-content: space-around;
-    margin-left: 300px;
+    justify-content: center;
+    margin-left: auto;
+    align-items: center;
 }
 
 .work {
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 200px;
+    width: auto;
+    height: auto;
     margin-left: 25px;
     margin-right: 25px;
     padding: 25px;
     justify-content: center;
     text-align: center;
     align-self: center;
-    border-style: solid;
-    border-width: 10px;
-    border-color: grey;
-    border-radius: 10%;
-    
-
 }
+
 .wrapper {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 30px;
+    justify-content: center;
+    
 }
 
 .mbox1 {
     display: flex;
     flex-direction: column;
-    width: 200px;
-    margin: 25px;
+    width: 400px;
+    margin: 10px 10px 10px 25px;
     padding: 25px;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     border-style: solid;
     border-color: rgb(71, 68, 68);
     border-width: 3px;
-    border-radius: 3%;
+    border-radius: 3%;  
 }
 
 .mbox1 a {
-    position: absolute;
-    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
 }
+
+
+
+
+
+/*Footer*/
+.footer {
+  background-image: linear-gradient(180deg, black, rgb(102, 98, 98));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;  
+  color: white;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 45px;
+  clear: both;
+}
+
+.footer h2 {
+    margin-top: 25px;
+    font-weight: bolder;
+    font-size: 25px;
+    align-self: center;
+}
+
+.footer p {
+    margin-top: 25px;
+    font-weight: bolder;
+    font-size: 25px;
+    align-self: center;
+}
+
+.footer_link {
+    padding-top: 25px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 25px;
+    padding-top:100px; 
+    align-self: center;
+}
+
+@media screen and (max-width: 780px) {
+    div.footer a {
+        font-size: 15px;
+    }
+}
+
