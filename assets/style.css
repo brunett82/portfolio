@@ -59,10 +59,12 @@ p {
 }
 
 .headshot {
-    width: 100px;
-    height: 100px;
-    padding: 10px 10px;
+    width: 150px;
+    height: 150px;
+    padding: 5px 5px;
     margin: 0px 25px 0px 25px;
+    border-style: solid;
+    border-radius: 25%;
 }
 
 .name {
@@ -127,11 +129,24 @@ p {
     justify-content: center;
     
 }
-
-.mbox1 {
+.mbox {
     display: flex;
     flex-direction: column;
     width: 400px;
+    margin: 10px 10px 10px 25px;
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-style: solid;
+    border-color: rgb(71, 68, 68);
+    border-width: 3px;
+    border-radius: 3%;  
+}
+.mbox1 {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
     margin: 10px 10px 10px 25px;
     padding: 25px;
     align-items: center;
@@ -150,7 +165,12 @@ p {
     align-content: center;
 }
 
-
+.mbox a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
 
 
 
